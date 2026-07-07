@@ -338,23 +338,41 @@
 
     <script>
       const groups = {
-        A: ["ISO PRO MAX", "PREDATOR", "NEW GENESIS", "FISTON FC"],
+        A: ["ISO PRO MAX", "PREDATOR", "NEW GENESIS", "FISTON FC", "MANCHESTER CITY"],
         B: ["WINNERS OF THE STREAM", "PRINNGUCCI", "PORTUGAL", "MN CITY"]
       };
 
       const fixtures = [
         { stage: "Group A", round: "Matchday 1", home: "ISO PRO MAX", away: "PREDATOR", homeGoals: 0, awayGoals: 0 },
         { stage: "Group A", round: "Matchday 1", home: "NEW GENESIS", away: "FISTON FC", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 1", home: "MANCHESTER CITY", away: "ISO PRO MAX", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 1", home: "PREDATOR", away: "NEW GENESIS", homeGoals: 0, awayGoals: 0 },
         { stage: "Group B", round: "Matchday 1", home: "WINNERS OF THE STREAM", away: "PRINNGUCCI", homeGoals: 0, awayGoals: 0 },
         { stage: "Group B", round: "Matchday 1", home: "PORTUGAL", away: "MN CITY", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 2", home: "FISTON FC", away: "MANCHESTER CITY", homeGoals: 0, awayGoals: 0 },
         { stage: "Group A", round: "Matchday 2", home: "ISO PRO MAX", away: "NEW GENESIS", homeGoals: 0, awayGoals: 0 },
         { stage: "Group A", round: "Matchday 2", home: "PREDATOR", away: "FISTON FC", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 2", home: "MANCHESTER CITY", away: "PREDATOR", homeGoals: 0, awayGoals: 0 },
         { stage: "Group B", round: "Matchday 2", home: "WINNERS OF THE STREAM", away: "PORTUGAL", homeGoals: 0, awayGoals: 0 },
         { stage: "Group B", round: "Matchday 2", home: "PRINNGUCCI", away: "MN CITY", homeGoals: 0, awayGoals: 0 },
         { stage: "Group A", round: "Matchday 3", home: "ISO PRO MAX", away: "FISTON FC", homeGoals: 0, awayGoals: 0 },
         { stage: "Group A", round: "Matchday 3", home: "PREDATOR", away: "NEW GENESIS", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 3", home: "MANCHESTER CITY", away: "NEW GENESIS", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 3", home: "FISTON FC", away: "PREDATOR", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 4", home: "ISO PRO MAX", away: "MANCHESTER CITY", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 4", home: "NEW GENESIS", away: "PREDATOR", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 4", home: "FISTON FC", away: "NEW GENESIS", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 4", home: "MANCHESTER CITY", away: "FISTON FC", homeGoals: 0, awayGoals: 0 },
         { stage: "Group B", round: "Matchday 3", home: "WINNERS OF THE STREAM", away: "MN CITY", homeGoals: 0, awayGoals: 0 },
         { stage: "Group B", round: "Matchday 3", home: "PRINNGUCCI", away: "PORTUGAL", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 5", home: "ISO PRO MAX", away: "FISTON FC", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 5", home: "PREDATOR", away: "MANCHESTER CITY", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 5", home: "NEW GENESIS", away: "MANCHESTER CITY", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 5", home: "PREDATOR", away: "ISO PRO MAX", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 6", home: "FISTON FC", away: "NEW GENESIS", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 6", home: "ISO PRO MAX", away: "PREDATOR", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 6", home: "MANCHESTER CITY", away: "NEW GENESIS", homeGoals: 0, awayGoals: 0 },
+        { stage: "Group A", round: "Matchday 6", home: "FISTON FC", away: "PREDATOR", homeGoals: 0, awayGoals: 0 },
         { stage: "Knockout", round: "Round 1 - Game 1", home: "ISO PRO MAX", away: "PREDATOR", homeGoals: 0, awayGoals: 0 },
         { stage: "Knockout", round: "Round 1 - Game 2", home: "NEW GENESIS", away: "FISTON FC", homeGoals: 0, awayGoals: 0 },
         { stage: "Knockout", round: "Round 2 - Semifinal 1", home: "Winner Game 1", away: "WINNERS OF THE STREAM (Bye)", homeGoals: 0, awayGoals: 0 },
@@ -370,7 +388,8 @@
         { team: "NEW GENESIS", value: 0 },
         { team: "PORTUGAL", value: 0 },
         { team: "MN CITY", value: 0 },
-        { team: "FISTON FC", value: 0 }
+        { team: "FISTON FC", value: 0 },
+        { team: "MANCHESTER CITY", value: 0 }
       ];
 
       function makeStandings(teamNames) {
@@ -488,7 +507,7 @@
 
       document.getElementById("stat-teams").textContent = [...groups.A, ...groups.B].length;
       document.getElementById("stat-group-games").textContent = 12;
-      document.getElementById("stat-knockout").textContent = 3;
+      document.getElementById("stat-knockout").textContent = 5;
       document.getElementById("stat-wildcard").textContent = 1;
     </script>
   </body>
